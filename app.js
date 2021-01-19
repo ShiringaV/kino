@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import usersRouters from './routes/users.js'
 import filmsRouters from './routes/films.js' 
 import cinemaRouters from './routes/cinema.js'
+import sellRouters from './routes/sell.js'
 
 const app = exspress()
 
@@ -13,6 +14,7 @@ app.use(bodyParser.json())
 app.use('/users', usersRouters)
 app.use('/api/films', filmsRouters)
 app.use('/api/cinema', cinemaRouters)
+app.use('/api/sell', sellRouters)
 
 app.get('/', (req, res) => {
     res.send('Hello from homepage')
